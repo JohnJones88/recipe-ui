@@ -1,0 +1,172 @@
+/* Modern recipe card styling */
+.recipe-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 12px;
+  margin: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Image styling */
+.recipe-image-container {
+  position: relative;
+  width: 50%;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.recipe-image {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-image {
+  transform: scale(1.05);
+}
+
+/* Food type badge */
+.food-type-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(65, 105, 225, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Card content */
+.recipe-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.recipe-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-description {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  flex-grow: 1;
+}
+
+/* Legacy figure styles - keeping for compatibility */
+.figure {
+  height: auto;
+  margin: 0;
+  position: relative;
+}
+
+.figure-image {
+  max-height: 200px;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.figure-name {
+  min-height: auto;
+  max-height: none;
+  line-height: 1.3;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.figure-description {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.figure-foodType {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .recipe-card {
+    margin: 6px;
+    padding: 10px;
+  }
+  
+  .recipe-image-container {
+    height: 120px;
+  }
+  
+  .recipe-name {
+    font-size: 1rem;
+  }
+  
+  .recipe-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-card {
+    margin: 4px;
+    padding: 8px;
+  }
+  
+  .recipe-image-container {
+    height: 100px;
+  }
+  
+  .recipe-name {
+    font-size: 0.95rem;
+  }
+}
