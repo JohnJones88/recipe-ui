@@ -1,0 +1,39 @@
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  
+  .CreatePage {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.uploaded-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.uploaded-image {
+  max-height: 80vh; /* or any height you prefer */
+  object-fit: contain;
+}
+
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .btn {
+    margin-top: 15px;
+  }
+  

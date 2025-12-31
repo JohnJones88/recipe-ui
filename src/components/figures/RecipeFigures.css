@@ -1,0 +1,32 @@
+.figure {
+    height: 250;
+    margin: 10 px;;
+    position: relative;
+}
+
+.figure-image {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.figure-name {
+    min-height: 25px;
+    max-height: 50px;
+    line-height: normal;
+}
+
+.figure-meat_Type {
+    height: 130px;
+    max-height: 130px;
+}
+.figure-non_Meat_Type {
+    height: 130px;
+    max-height: 130px;
+}
+
+figure:hover {
+    cursor: pointer;
+    box-shadow: 0px 12px 30px 0px gray;
+    transform: scale(1.1,1.1);
+    transition: all 800ms;
+}
